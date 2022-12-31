@@ -52,4 +52,5 @@ npm run test
 You can also run them via the Playwright VS Code extension
 
 ### Structure of the app
-[This should follow a basic project structure of any svelteKit app. Decided to follow someone's standard for once..](https://kit.svelte.dev/docs/project-structure) 
+
+[This should follow a basic project structure of any svelteKit app. Decided to follow someone's standard for once..](https://kit.svelte.dev/docs/project-structure)
