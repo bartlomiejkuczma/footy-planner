@@ -12,7 +12,8 @@
 		"cz": "cz",
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"release": "standard-version --no-verify"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.3.0",
@@ -32,6 +33,7 @@
 		"inquirer": "^8.2.5",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
+		"standard-version": "^9.5.0",
 		"svelte": "^3.54.0",
 		"svelte-check": "^2.9.2",
 		"tslib": "^2.4.1",
