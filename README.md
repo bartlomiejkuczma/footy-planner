@@ -1,6 +1,6 @@
-# create-svelte
+# Footy Planner
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Fancied learn something new so converting somewhat usable version of my angular 12 app for planning 3G/4G pitch games into Svelte cause why not... :D
 
 ## Creating a project
 
@@ -16,7 +16,13 @@ npm create svelte@latest my-app
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the development server:
 
 ```bash
 npm run dev
@@ -35,4 +41,15 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Running the tests
+
+You can run the Playwright tests via a command prompt with:
+
+```bash
+npm run test
+```
+
+You can also run them via the Playwright VS Code extension
+
+### Structure of the app
+[This should follow a basic project structure of any svelteKit app. Decided to follow someone's standard for once..](https://kit.svelte.dev/docs/project-structure) 
