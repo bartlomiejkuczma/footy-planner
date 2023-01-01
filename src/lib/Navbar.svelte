@@ -42,7 +42,7 @@
 </script>
 
 <nav>
-	<ul class="flex justify-evenly bg-slate-50 text-slate-600">
+	<ul class="flex justify-evenly bg-white text-slate-600">
 		{#each navItems as navItem}
 			<li class="flex flex-col items-center py-3 whitespace-nowrap {navItem.styleClass}">
 				<iconify-icon class="text-2xl" icon={navItem.icon} />

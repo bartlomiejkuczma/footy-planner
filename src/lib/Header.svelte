@@ -6,7 +6,7 @@
 </script>
 
 {#if isHomePage}
-	<div class="flex flex-col items-center py-9 font-bold bg-slate-50">
+	<div class="flex flex-col items-center py-9 font-bold bg-white">
 		<p class="text-2xl text-grass-green leading-none">Cotham</p>
 		<p class="text-3xl text-deep-gold leading-none">Super League</p>
 	</div>

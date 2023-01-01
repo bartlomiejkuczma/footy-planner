@@ -7,7 +7,7 @@
 
 <div class="container h-screen flex flex-col">
 	<Header />
-	<div class="grow">
+	<div class="flex flex-col grow p-4 gap-y-4 bg-slate-200">
 		<slot />
 	</div>
 	<Navbar />
