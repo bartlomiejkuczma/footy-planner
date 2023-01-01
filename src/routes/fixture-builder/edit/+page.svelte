@@ -5,7 +5,7 @@
 	headerTitle.set('Fixture Builder');
 	headerSubTitle.set('Manage games for different types of fixtures');
 
-	function cancelFixture(_: Event) {
+	function cancelFixture() {
 		goto('/fixture-builder');
 	}
 </script>

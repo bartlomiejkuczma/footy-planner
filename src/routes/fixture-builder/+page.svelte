@@ -5,7 +5,7 @@
 	headerTitle.set('Fixture Builder');
 	headerSubTitle.set('Manage games for different types of fixtures');
 
-	function routeToEditPage(_: Event) {
+	function routeToEditPage() {
 		goto('/fixture-builder/edit');
 	}
 </script>
