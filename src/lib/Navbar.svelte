@@ -28,7 +28,7 @@
 
 		navItems.forEach((item) => {
 			item.active = routeActiveSegment.endsWith(item.href);
-			item.styleClass = item.active ? 'font-bold text-green-600' : '';
+			item.styleClass = item.active ? 'font-bold text-grass-green' : '';
 		});
 
 		navItems = navItems;
