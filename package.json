@@ -9,9 +9,9 @@
 		"test": "playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"cz": "cz",
+		"commit": "cz",
 		"test:unit": "vitest",
-		"test:unit-cli": "vitest run",
+		"test:unit-headless": "vitest run",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"release": "standard-version --no-verify"
