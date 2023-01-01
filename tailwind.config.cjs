@@ -9,5 +9,16 @@ module.exports = {
 			}
 		}
 	},
+	daisyui: {
+		themes: [
+			{
+				default: {
+					primary: '#0082AE',
+					secondary: '#708199',
+					error: '#DF2A36'
+				}
+			}
+		]
+	},
 	plugins: [require('daisyui')]
 };

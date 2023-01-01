@@ -7,8 +7,14 @@
 
 <div class="container h-screen flex flex-col">
 	<Header />
-	<div class="flex flex-col grow p-4 gap-y-4 bg-slate-200">
+	<div id="content" class="flex flex-col p-4 gap-y-4 overflow-y-auto bg-slate-200">
 		<slot />
 	</div>
 	<Navbar />
 </div>
+
+<style>
+	#content {
+		height: calc(100% - 64px - 80px);
+	}
+</style>

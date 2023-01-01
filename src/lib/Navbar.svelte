@@ -41,7 +41,7 @@
 	$: if ($navigating) updateRouteClasses();
 </script>
 
-<nav>
+<nav class="sticky bottom-0">
 	<ul class="flex justify-evenly bg-white text-slate-600">
 		{#each navItems as navItem}
 			<li class="flex flex-col items-center py-3 whitespace-nowrap {navItem.styleClass}">
