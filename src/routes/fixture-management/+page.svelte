@@ -110,11 +110,16 @@
 		const playerName = formData.get('name');
 
 		if (playerName && playerName.toString().length > 0) {
-			let playerEditIndex = $fixturePlanningPlayers.findIndex((p) => p.id === stateMap.activeEditPlayer);
+			let playerEditIndex = $fixturePlanningPlayers.findIndex(
+				(p) => p.id === stateMap.activeEditPlayer
+			);
 
 			if (playerEditIndex > -1) {
 				let newState = [...$fixturePlanningPlayers];
-				newState[playerEditIndex] = { ...$fixturePlanningPlayers[playerEditIndex], name: playerName.toString() }
+				newState[playerEditIndex] = {
+					...$fixturePlanningPlayers[playerEditIndex],
+					name: playerName.toString()
+				};
 
 				fixturePlanningPlayers.set(newState);
 			}

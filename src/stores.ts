@@ -9,6 +9,6 @@ export const gameStatus = writable(GameStatuses.NotConfirmed);
 export const fixturePlanningPlayers = writable<PlayerState[]>([]);
 
 export type PlayerState = {
-    id: string,
-    name: string
-}
+	id: string;
+	name: string;
+};
