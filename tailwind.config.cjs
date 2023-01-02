@@ -6,6 +6,9 @@ module.exports = {
 			colors: {
 				'grass-green': '#479A6D',
 				'deep-gold': '#C4B27A'
+			},
+			transitionProperty: {
+				spacing: 'margin, padding'
 			}
 		}
 	},
