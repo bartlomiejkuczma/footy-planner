@@ -15,6 +15,7 @@ module.exports = {
 				default: {
 					primary: '#0082AE',
 					secondary: '#708199',
+					accent: '#479A6D',
 					error: '#DF2A36'
 				}
 			}
