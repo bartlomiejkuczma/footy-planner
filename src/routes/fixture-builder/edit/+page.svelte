@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { headerTitle, headerSubTitle } from '../../../stores';
+	import { GameStatuses } from '@stores/enums/game-statuses';
+	import { headerTitle, headerSubTitle, gameStatus } from '@stores';
 
 	headerTitle.set('Fixture Builder');
 	headerSubTitle.set('Manage games for different types of fixtures');
 
 	function cancelFixture() {
 		goto('/fixture-builder');
+		gameStatus.set(GameStatuses.Cancelled);
 	}
 </script>
 
@@ -73,5 +75,5 @@
 
 <div class="flex gap-8">
 	<button class="btn btn-error basis-0 grow" on:click={cancelFixture}>Cancel Fixture</button>
-	<button class="btn btn-primary basis-0 grow">Confirm</button>
+	<button class="btn btn-primary basis-0 grow" on:click={cancelFixture}>Confirm</button>
 </div>

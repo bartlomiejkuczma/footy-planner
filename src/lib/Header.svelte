@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { headerTitle, headerSubTitle } from '../stores';
+	import { headerTitle, headerSubTitle } from '@stores';
 
 	$: isHomePage = $page.url.pathname === '/';
 </script>

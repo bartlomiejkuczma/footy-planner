@@ -1,5 +1,25 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { gameStatus } from '@stores';
+	import { GameStatuses } from '@stores/enums/game-statuses';
+
+	const defaultGameStyleClass = 'bg-secondary';
+
+	onMount(() => {
+		if ($gameStatus === GameStatuses.Confirmed) {
+			gameStyleClass = 'bg-grass-green';
+		} else if ($gameStatus === GameStatuses.Cancelled) {
+			gameStyleClass = 'bg-error';
+		} else {
+			gameStyleClass = defaultGameStyleClass;
+		}
+	});
+
+	$: gameStyleClass = defaultGameStyleClass;
+</script>
+
 <h2 class="text-lg font-bold text-slate-600 mt-auto">Next Game</h2>
-<div class="card items-center px-4 py-6 bg-grass-green text-slate-50">
+<div class="card items-center px-4 py-6 {gameStyleClass} text-slate-50">
 	<h2 class="card-title font-normal text-sm pb-4">Sun 1 Jan 2023</h2>
 	<div class="card-body flex flex-row items-center justify-evenly p-0">
 		<iconify-icon class="text-6xl text-slate-900" icon="ion:shirt" />
@@ -7,7 +27,7 @@
 		<iconify-icon class="text-6xl" icon="ion:shirt" />
 	</div>
 </div>
-<div class="card flex-row items-center justify-between p-4 bg-grass-green text-slate-50">
+<div class="card flex-row items-center justify-between p-4 {gameStyleClass} text-slate-50">
 	<h2 class="card-title font-normal text-sm">Cost</h2>
 	<div class="card-body p-0 grow-0">
 		<p class="text-2xl font-bold">£5.00</p>
