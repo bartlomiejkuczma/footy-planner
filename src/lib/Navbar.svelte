@@ -16,6 +16,7 @@
 			text: 'Fixture Builder',
 			href: '/fixture-builder',
 			icon: 'game-icons:babyfoot-players',
+			relativeActivePaths: ['/fixture-management'],
 			active: false,
 			styleClass: ''
 		},
@@ -27,7 +28,11 @@
 			$navigating == null ? $page.url.pathname : $navigating?.to?.url.pathname ?? '';
 
 		navItems.forEach((item) => {
-			item.active = routeActiveSegment.endsWith(item.href);
+			item.active =
+				item.href.length == 1
+					? routeActiveSegment === item.href
+					: routeActiveSegment.startsWith(item.href) ||
+					  (item?.relativeActivePaths?.some((p) => routeActiveSegment.startsWith(p)) ?? false);
 			item.styleClass = item.active ? 'font-bold text-grass-green' : '';
 		});
 
