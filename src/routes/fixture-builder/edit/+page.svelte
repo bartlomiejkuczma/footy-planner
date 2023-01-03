@@ -10,6 +10,8 @@
 		goto('/fixture-builder');
 		gameStatus.set(GameStatuses.Cancelled);
 	}
+
+	const confirmFixtureEdit = () => goto('/fixture-builder');
 </script>
 
 <div class="mt-auto">
@@ -75,5 +77,7 @@
 
 <div class="flex gap-8">
 	<button class="btn btn-error basis-0 grow" on:click={cancelFixture}>Cancel Fixture</button>
-	<button class="btn btn-primary basis-0 grow" on:click={cancelFixture}>Confirm</button>
+	<button class="btn btn-primary basis-0 grow" on:click="{confirmFixtureEdit}"
+		>Confirm</button
+	>
 </div>

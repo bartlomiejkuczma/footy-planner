@@ -8,7 +8,8 @@ module.exports = {
 				'deep-gold': '#C4B27A'
 			},
 			transitionProperty: {
-				spacing: 'margin, padding'
+				spacing: 'margin, padding',
+				modal: 'visibility, opacity'
 			}
 		}
 	},

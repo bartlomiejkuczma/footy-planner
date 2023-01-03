@@ -2,17 +2,28 @@
 	import { goto } from '$app/navigation';
 	import { GameStatuses } from '@stores/enums/game-statuses';
 	import { headerTitle, headerSubTitle, gameStatus } from '@stores';
+	import Modal from '@lib/components/Modal.svelte';
 
 	headerTitle.set('Fixture Builder');
 	headerSubTitle.set('Manage games for different types of fixtures');
+
+	let showConfirmModal = false;
 
 	function routeToEditPage() {
 		goto('/fixture-builder/edit');
 	}
 
 	function confirmFixture() {
-		gameStatus.set(GameStatuses.Confirmed);
-		goto('/fixture-management');
+		showConfirmModal = true;
+
+		setTimeout(() => {
+			showConfirmModal = false;
+
+			setTimeout(() => {
+				gameStatus.set(GameStatuses.Confirmed);
+				goto('/fixture-management');
+			}, 1000);
+		}, 2000);
 	}
 </script>
 
@@ -32,3 +43,12 @@
 	<button class="btn btn-secondary basis-0 grow" on:click={routeToEditPage}>Edit</button>
 	<button class="btn btn-primary basis-0 grow" on:click={confirmFixture}>Confirm</button>
 </div>
+
+{#if showConfirmModal}
+	<Modal on:close={() => (showConfirmModal = false)}>
+		<div slot="icon">
+			<iconify-icon class="text-4xl text-white" icon="mdi:tick-circle" />
+		</div>
+		<div slot="title">Fixture confirmed successfully!</div>
+	</Modal>
+{/if}
