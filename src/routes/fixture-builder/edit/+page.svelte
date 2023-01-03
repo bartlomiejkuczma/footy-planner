@@ -77,7 +77,5 @@
 
 <div class="flex gap-8">
 	<button class="btn btn-error basis-0 grow" on:click={cancelFixture}>Cancel Fixture</button>
-	<button class="btn btn-primary basis-0 grow" on:click="{confirmFixtureEdit}"
-		>Confirm</button
-	>
+	<button class="btn btn-primary basis-0 grow" on:click={confirmFixtureEdit}>Confirm</button>
 </div>
